@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Recruitment Solution</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+    
+    .navbar-logo {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    .navbar-links {
+      display: flex;
+    }
+    
+    .navbar-link {
+      margin-left: 20px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    .navbar-link:hover {
+      text-decoration: underline;
+    }
+    
+    .search-bar {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .search-input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    .search-button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .search-button:hover {
+      background-color: #666;
+    }
+    
+    h1 {
+      font-size: 36px;
+      color: #333;
+      text-align: center;
+      animation: fade-in 1s ease-in-out;
+    }
+    
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    p {
+      font-size: 18px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: slide-up 1s ease-in-out;
+    }
+    
+    @keyframes slide-up {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    
+    .feature {
+      width: 30%;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: scale-up 1s ease-in-out;
+      margin-bottom: 1%;
+    }
+    
+    @keyframes scale-up {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    .feature h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .feature p {
+      font-size: 16px;
+      color: #666;
+    }
+    
+    .highlight {
+      background-color: #ffcc00;
+    }
+    
+    .cta-button {
+      display: block;
+      width: 200px;
+      margin: auto;
+      padding: 15px 30px;
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+      animation: fade-in 1s ease-in-out;
+    }
+    
+    .cta-button:hover {
+      background-color: #666;
+    }
+    
+    .cta-button:active {
+      background-color: #222;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 2%;
+      }
+      
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      
+      .footer-link {
+        margin: 0 10px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #fff;
+      }
+      
+      .footer-link:hover {
+        text-decoration: underline;
+      }
+      
+      .footer-logo {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+      }
+
+/* Responsive styles */
+    
+@media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+    
+    .navbar-links {
+      margin-top: 10px;
+      
+    }
+    
+    .navbar-link {
+      margin: 10px 0;
+      margin-right: 0.2%;
+    }
+    
+    .search-bar {
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 10px;
+    }
+    
+    .search-input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .features {
+      flex-wrap: wrap;
+    }
+    
+    .feature {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="search-bar">
+          <input class="search-input" type="text" placeholder="Search...">
+          <button class="search-button">Search</button>
+        </div>
+
+    <div class="navbar">
+        <a class="navbar-logo" href="#">Recruitment Solution</a>
+        <div class="navbar-links">
+        <a class="navbar-link" href="login.html">User Login</a>
+        <a class="navbar-link" href="register.html">Register</a>
+        </div>
+    </div>
+<div class="container">
+    <h1>Online Recruitment Solution</h1>
+    <p>Efficiently manage your hiring process with our powerful online recruitment solution designed for hiring managers and HR professionals.</p>
+    
+    <div class="features">
+    <div class="feature">
+        <h2>Streamlined Job Posting</h2>
+        <p>Quickly create and publish job postings to attract top talent.</p>
+    </div>
+    <div class="feature highlight">
+        <h2>Automated Screening</h2>
+        <p>Save time with automated screening of applicants based on predefined criteria.</p>
+    </div>
+    <div class="feature">
+        <h2>Collaborative Hiring</h2>
+        <p>Effortlessly collaborate with team members throughout the hiring process.</p>
+    </div>
+    </div>
+    
+    <a class="cta-button" href="register.html">Get Started</a>
+
+    <footer class="footer">
+        <p>&copy; 2023 Online Recruitment Solution. All rights reserved.</p>
+        <div class="footer-links">
+          <a class="footer-link" href="#">Terms of Service</a>
+          <a class="footer-link" href="#">Privacy Policy</a>
+          <a class="footer-link" href="#">Contact Us</a>
+        </div>
+        <p>Designed by <a class="footer-logo" href="#">Rahul Bhardwaj</a></p>
+      </footer>
+</div>
+</body>
+</html>
